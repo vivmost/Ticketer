@@ -1,6 +1,7 @@
 /* Adjusting default styling */
 * {
   box-sizing: border-box;
+  font-family: 'PT Serif', serif;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 
 .toolbox-priority-cont {
   height: 3.5rem;
-  width: 16rem;
+  width: 14rem;
   background-color: #3d3d3d;
   display: flex;
   justify-content: space-around;
@@ -32,7 +33,7 @@ body {
 
 .action-btn-cont {
   height: 3.5rem;
-  width: 8rem;
+  width: 6rem;
   background-color: #3d3d3d;
   display: flex;
 }
@@ -48,7 +49,7 @@ body {
 
 .color {
   height: 1.2rem;
-  width: 2.5rem;
+  width: 2rem;
   background-color: lightsalmon;
   border-radius: 2px;
 }
@@ -82,6 +83,7 @@ body {
   top: calc((100vh - 50vh) / 2);
   left: calc((100vw - 45vw) / 2);
   display: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .textarea-cont {
@@ -111,7 +113,7 @@ body {
 }
 
 .border {
-  border: 4px solid #c9bd1a;
+  border: 4px solid #848585;
 }
 
 /* Ticket Styling */
@@ -122,18 +124,18 @@ body {
 }
 
 .ticket-color {
-    height: 1rem;
+  height: 1rem;
 }
 
 .ticket-id {
-    height: 2rem;
-    padding: 0.4rem;
+  height: 2rem;
+  padding: 0.4rem;
 }
 
 .task-area {
-    height: calc(100% - 1rem - 2rem - 2rem);
-    padding: 0.4rem;
-    outline: none;
+  height: calc(100% - 1rem - 2rem - 2rem);
+  padding: 0.4rem;
+  outline: none;
 }
 
 .ticket-lock {
@@ -147,9 +149,49 @@ body {
 
 /* Main Container Styling */
 .main-cont {
-    display: flex;
-    flex-wrap: wrap;  
-    padding: 2rem;
-    gap :2rem;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Responsiveness */
+@media screen and (min-width: 425px) and (max-width: 726px) {
+  .modal-cont {
+    height: 40vh;
+    width: 75vw;
+    top: calc((100vh - 40vh) / 2);
+    left: calc((100vw - 75vw)/2);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .modal-cont {
+    height: 60vh;
+    width: 75vw;
+    top: calc((100vh - 60vh) / 2);
+    left: calc((100vw - 75vw) / 2);
+    flex-direction: column;
+  }
+
+  .textarea-cont {
+    width: 100%;
+    height: 75%;
+  }
+
+  .priority-colors-cont {
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+  }
+
+  .priority-color {
+    width: 17%;
+  }
+
+  .toolbox-cont > * {
+    margin-left: 2rem;
+    border-radius: 2px;
+  }
 }
